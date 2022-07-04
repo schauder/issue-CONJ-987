@@ -12,7 +12,8 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 
-		<mariadb-java-client.version>3.0.6</mariadb-java-client.version>
+<!--		<mariadb-java-client.version>3.0.6</mariadb-java-client.version>-->
+		<mariadb-java-client.version>2.7.6</mariadb-java-client.version>
 	</properties>
 
 	<dependencies>

@@ -65,7 +65,12 @@ class ReproducerTest {
 		createData(conn);
 
 		final Object binaryData = readBinaryData(conn);
-		Assertions.assertThat(((String) binaryData).getBytes()).isEqualTo(new byte[]{1, 23, 42});
+
+		// This one works with the 2.7.6 driver
+		Assertions.assertThat(binaryData).isEqualTo(new byte[]{1, 23, 42});
+
+		// The following works with the 3.0.6 driver
+		// Assertions.assertThat(((String) binaryData).getBytes()).isEqualTo(new byte[]{1, 23, 42});
 	}
 
 	private Object readBinaryData(Connection conn) throws SQLException {
